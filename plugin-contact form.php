@@ -1,7 +1,7 @@
 <?php
 /**
 *Plugin name: contact form
-*Description: connect to other page
+*Description: create for user to give feedback about the website by e-mail
 */
 
 
