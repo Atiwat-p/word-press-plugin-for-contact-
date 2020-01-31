@@ -1,7 +1,7 @@
 <?php
 /**
 *Plugin name: contact form
-*Description: create for user to give feedback about the website by e-mail
+*Description: connect to other page
 */
 
 
@@ -14,6 +14,10 @@ function contact_form()
 
     $content .='<label for="your_name">name  </label>';
     $content .='<br><input type="text" name="your_name" placeholder="Please Enter your name" />';
+
+    $content .='<br><br><label for="your_ph_number">Phone number  </label>';
+    $content .='<br><input type="text" name="your_ph_number" placeholder="Please Enter your phone number" />';
+
 
     $content .= '<br><br><label for="your_email">E-mail  </label>';
     $content .= '<br><input type="email" name="your_email" placeholder="Please Enter your E-mail" />';
@@ -35,12 +39,13 @@ function contact_capture()
     if(isset($_POST['submit_your_request']))
     {
         $name = sanitize_text_field($_POST['your_name']);
+        $phone = sanitize_text_field($_POST['your_ph_number']);
         $email = sanitize_text_field($_POST['your_email']);
         $comment = sanitize_textarea_field($_POST['your_comment']);
 
         $to = 'atwbn.bm@gmail.com';
         $subject = 'Test for working process';
-        $message = ''.$name.' - '.$email.' - '.$comment;
+        $message = ''.$name.' - '.$phone.' - '.$email.' - '.$comment;
 
         wp_mail($to,$subject,$message);
     }
