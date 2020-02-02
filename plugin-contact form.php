@@ -13,17 +13,17 @@ function contact_form()
     $content .= '<form method="post" action="http://localhost/webone/index.php/thank-you/">';
 
     $content .='<label for="your_name">name  </label>';
-    $content .='<br><input type="text" name="your_name" placeholder="Please Enter your name" />';
+    $content .='<br><br><input type="text" name="your_name" placeholder="Please Enter your name" />';
 
     $content .='<br><br><label for="your_ph_number">Phone number  </label>';
-    $content .='<br><input type="text" name="your_ph_number" placeholder="Please Enter your phone number" />';
+    $content .='<br><br><input type="text" name="your_ph_number" placeholder="Please Enter your phone number" />';
 
 
-    $content .= '<br><br><label for="your_email">E-mail  </label>';
+    $content .= '<br><br><br><label for="your_email">E-mail  </label>';
     $content .= '<br><input type="email" name="your_email" placeholder="Please Enter your E-mail" />';
 
     $content .='<br><br><label for="your_comment">comment </label>';
-    $content .='<br><textarea name="your_comment" placeholder="Enter your comment"></textarea>';
+    $content .='<br><br><textarea name="your_comment" placeholder="Enter your comment"></textarea>';
 
     $content .='<br><br><input type="submit" name="submit_your_request" value="Send your Information" />';
 
